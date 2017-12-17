@@ -1,0 +1,11 @@
+[Unit]
+Description=Best plotter in the world
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/harryplotter/server
+ExecStart=/usr/bin/python main.py
+
+[Install]
+WantedBy=multi-user.target

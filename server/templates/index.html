@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harry Plotter</title>
+</head>
+<body style="background-color: #000047; color: white;">
+  <h1> Harry Plotter</h1>
+    <center style="margin-top: 60px;">
+      {% if state == "upload" %}
+        <table cellspacing=0 cellpadding=0 border=0 background="static/harryplotter.gif" width=614 height=460>
+          <tr>
+            <td colspan=3 height=119></td>
+          </tr>
+          <tr>
+            <td width=118 height=329></td>
+            <td width=377><img src="{{ preview }}"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan=3></td>
+          </tr>
+        </table>
+	<p>Sieht das so richtig aus?</p>
+        <form method="POST" action="/plot">
+          <input type="submit" value="Plot it!">
+        </form>
+      {% elif state == "plot" %}
+        <p><marquee scrollamount=60>Plotting ...</marquee></p>
+      {% else %}
+        <form method="POST" enctype="multipart/form-data" action="/upload">
+          <input type="file" name="file">
+          <input type="submit" value="Upload!">
+        </form>
+      {% endif %}
+    </center>
+
+    <h2 style="margin-top: 60px;">How to Harry</h2>
+      <ul style="margin-bottom: 60px;">
+        <li>hpgl-file mit Inkscape erstellen</li>
+        <li>Harry Plotter einschalten</li>
+        <li>Medium einlegen (Folie)</li>
+        <li>Medium initialisieren: F3 für ein Blatt F4 für eine Rolle</li>
+        <li>leuchtet Harrys online-Lämpchen? Wenn nicht hast du bis hier hin etwas falsch gemacht</li>
+        <li>leuchtet es: hpgl-File hier Hochladen</li>
+        <li>auf "Plot it!" Klicken</li>
+        <li>nach dem Plotvorgang das überflüssige Material mittels Skalpell ablösen</li>
+        <li>ab hier nur noch impro!</li>
+    </ul>
+
+  </body>
+</html>

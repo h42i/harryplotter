@@ -1,0 +1,16 @@
+19a20
+> domain-needed
+21a23
+> bogus-priv
+58a61
+> no-resolv
+74a78
+> local=/plotter/
+135a140
+> expand-hosts
+144a150
+> domain=plotter
+157a164
+> dhcp-range=192.168.1.201,192.168.1.249,12h
+398a406
+> dhcp-option=252,"\n"
