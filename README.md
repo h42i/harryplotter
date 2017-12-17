@@ -34,7 +34,7 @@ Raspbian system configuration and web-servicer for harry plotter
     sudo aptitude -y install git
     git clone https://github.com/h42i/harryplotter.git
     cd harryplotter
-    sudo ./setup.py
+    sudo ./setup.sh
     sudo reboot
     ```
 3. Disconnect the Raspbery Pi from your network as it will start DNS- and DHCP-servers, which otherwise *will* mess things up.
