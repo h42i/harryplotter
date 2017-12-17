@@ -1,6 +1,7 @@
 #!/bin/sh -xe
 # Install dependencies
-aptitude install dnsmasq python-flask python-pil python-serial
+aptitude -y upgrade
+aptitude -y install dnsmasq python-flask python-pil python-serial
 
 # Configure network services
 sed -i 's/raspberrypi/harry/' /etc/hostname /etc/hosts
