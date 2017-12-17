@@ -15,15 +15,14 @@ Raspbian system configuration and web-servicer for harry plotter
 ### Basic configuration and remote access
 1. Configure keyboard and timezone:
     ```
-    dpkg-reconfigure keyboard-configuration
-    service keyboard-setup restart
-    dpkg-reconfigure tzdata
+    sudo dpkg-reconfigure keyboard-configuration
+    sudo dpkg-reconfigure tzdata
     ```
 2. Start SSH daemon
     ```
-    passwd 
-    systemctl enable ssh.service
-    systemctl start ssh.service
+    passwd
+    sudo systemctl enable ssh.service
+    sudo reboot
     ```
 
 
@@ -31,6 +30,8 @@ Raspbian system configuration and web-servicer for harry plotter
 1. SSH into the Raspberry Pi.
 2. Clone the repository and execute setup script:
     ```
+    sudo aptitude update
+    sudo aptitude -y install git
     git clone https://github.com/h42i/harryplotter.git
     cd harryplotter
     sudo ./setup.py
