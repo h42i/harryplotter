@@ -1,7 +1,8 @@
 #!/bin/sh -xe
 # Install dependencies
 aptitude -y upgrade
-aptitude -y install dnsmasq python-flask python-pil python-serial
+aptitude -y install dnsmasq python-flask python-pil python-serial pip
+pip install imageio
 
 # Configure network services
 sed -i 's/raspberrypi/harry/' /etc/hostname /etc/hosts
